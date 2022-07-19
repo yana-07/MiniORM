@@ -1,4 +1,5 @@
 ﻿namespace MiniORM
 {
-	// TODO: Create your DbSet class here.
+	// Holds collecton of real entities
+	// Corresponds to a table in the database
 }

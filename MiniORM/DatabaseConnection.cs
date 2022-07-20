@@ -35,12 +35,10 @@
 
         public int ExecuteNonQuery(string queryText, params SqlParameter[] parameters)
         {
-            using (var query = CreateCommand(queryText, parameters))
-            {
-                var result = query.ExecuteNonQuery();
+            using var query = CreateCommand(queryText, parameters);
+            var result = query.ExecuteNonQuery();
 
-                return result;
-            }
+            return result;
         }
 
         public IEnumerable<string> FetchColumnNames(string tableName)
